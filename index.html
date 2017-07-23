@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="css/all.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <div class="top">
+          <h1>BMI calculator</h1>
+          <form class="data">
+            <label for="height">身高cm</label>
+            <input type="text" name="height" placeholder="請輸入身高" id="height">
+            <label for="weight">體重kg</label>
+            <input type="text" name="weight" placeholder="請輸入體重" id="weight">
+          </form>
+            <input type="button" name="btn" value="看結果" class="btn animate">
+            <div class="result">
+              <p id="bmi_data" style="font-size:32px">20.9</p>
+              <p stle="font-size:14px">BMI</p>
+              <input type="button" name="retry" value="" style="background-image:url(img/icons_loop.png)" class="refresh">
+            </div>
+            <p id="comment">理想</p>
+        </div>
+        <h2 style="color:white; text-align:center">請輸入身高、體重</h2>
+      </div>
+      <div class="container">
+        <div class="content">
+          <h1>BMI 記錄</h1>
+          <div class="list">
+          <!--  <ul class="bmi-result">
+              <li><h2>理想</h2></li>
+              <li><h3>BMI</h3></li>
+              <li><h2>20.9</h2></li>
+              <li><h3>weight</h3></li>
+              <li><h2>20.9</h2></li>
+              <li><h3>height</h3></li>
+              <li><h2>20.9</h2></li>
+              <li><h3>06-19-2017</h3></li>
+            </ul>-->
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <img src="img/logo.png" alt="bmi-calculator">
+      </div>
+    </div>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/all.js"></script>
+  </body>
+</html>

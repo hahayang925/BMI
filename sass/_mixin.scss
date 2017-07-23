@@ -1,0 +1,10 @@
+@mixin clearfix{
+  content:'';
+  display:table;
+  clear:both;
+}
+@mixin hide{
+  text-indent:101%;
+  overflow:hidden;
+  white-space: nowrap;
+}

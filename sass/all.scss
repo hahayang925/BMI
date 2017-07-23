@@ -1,0 +1,244 @@
+@import "reset";
+@import "basic";
+@import "mixin";
+$back-color:#424242;
+$main-color:#FFD366;
+$ideal-weight:#86D73E;
+$under-weight:#31BAF9;
+$over-weight:#FF982D;
+$light-weight:#FF6C02;
+$middle-weight:#FF6C02;
+$heavy-weight:#FF1200;
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:rgba(255,255,255,0.50);
+}
+//::-webkit-input-placeholder { color:#f00; }
+//::-moz-placeholder { color:#f00; } /* firefox 19+ */
+//:-ms-input-placeholder { color:#f00; } /* Internet Explorer 10+ */
+//:-moz-placeholder { color:#f00; } /* firefox 14-18 */
+.wrap{
+  max-width:100%;
+  height:auto;
+}
+.header{
+  height:300px;
+  background:#424242;
+  min-width:800px;
+  .top:after{
+    @include clearfix;
+  }
+  .top{
+    max-width: 1024px;
+    margin:0 auto;
+    height:auto;
+    h1{
+      float:left;
+      background-image: url(../img/logo.png);
+      float:left;
+      margin-left: 173px;
+      margin-top: 92px;
+      @include hide;
+      height:117px;
+      width:117px;
+    }
+    form{
+      float:left;
+      padding-top: 74px;
+      padding-left: 97px;
+    }
+    .data{
+      font-size: 18px;
+      line-height: 21px;
+      color:#FFD366;
+    }
+    #height, #weight{
+      font-family: '微軟正黑體';
+      font-size: 24px;
+      line-height: 28px;
+      width:250px;
+      height:40px;
+      border:2px solid #FFD366;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.18);
+      color: white;
+      text-indent: 1em;
+      display:block;
+      margin-top: 7px;
+      margin-bottom: 23px;
+    }
+    input:focus{
+      outline: none;
+    }
+    .btn.under-weight{
+        border:  6px solid $under-weight;
+        background-color:$back-color;
+        width:117px;
+        height:117px;
+      }
+    .btn.over-weight{
+        border:  6px solid $over-weight;
+        background-color:$back-color;
+        width:117px;
+        height:117px;
+      }
+    .btn.light-weight{
+        border:  6px solid $light-weight;
+        background-color:$back-color;
+        width:117px;
+        height:117px;
+      }
+    .btn.ideal-weight{
+        border:  6px solid $ideal-weight;
+        background-color:$back-color;
+        width:117px;
+        height:117px;
+      }
+    .btn.heavy-weight{
+        border:  6px solid $heavy-weight;
+        background-color:$back-color;
+      }
+   .btn{
+      width:120px;
+      height:120px;
+      border-radius: 50%;
+      background-color: $main-color;
+      color: #424242;
+      float:left;
+      margin-top: 92px;
+      margin-left: 53px;
+      font-family: '微軟正黑體';
+      line-height: 25px;
+      border:none;
+      font-size: 24px;
+      display:inline-block;
+    }
+   .animate:hover{
+     box-shadow: 0 1px 6px 3px rgba(255,195,49,0.64);
+   }
+   .animate:active{
+     background: #DEA921;
+   }
+
+ }
+}
+
+.result{
+  width:117px;
+  height:117px;
+  background-color: $back-color;
+  display:inline-block;
+  position:relative;
+  border-radius: 50%;
+  margin-top: 95px;
+  margin-left: 56px;
+  border:6px solid white;
+  display:none;
+  color:#86D73E;
+  p{
+     //color:white;
+     text-align: center;
+     vertical-align: middle;
+  }
+  #bmi_data{
+    padding-top:30px;
+  }
+  .refresh{
+    width:30px;
+    height:30px;
+    border:none;
+    border-radius: 50%;
+    border: 3px solid #424242;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position:absolute;
+    left:90px;
+    bottom:18px;
+  }
+}
+
+.top{
+  #comment{
+    //display:inline;
+    font-size: 32px;
+    color:white;
+    padding-left: 18px;
+    position:absolute;
+    top:135px;
+    display:none;
+  }
+}
+
+.container{
+  width:100%;
+  min-height:800px;
+  background-color: #F2F2F2;
+}
+.content{
+  min-height: 800px;
+  max-width: 1024px;
+  margin:0 auto;
+  padding:3%;
+  .under-weight{
+      border-left:  5px solid $under-weight;
+    }
+  .over-weight{
+      border-left:  5px solid $over-weight;
+    }
+  .light-weight{
+      border-left:  5px solid $light-weight;
+    }
+  .ideal-weight{
+      border-left:  5px solid $ideal-weight;
+    }
+  .heavy-weight{
+      border-left:  5px solid $heavy-weight;
+    }
+  h1{
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .bmi-result{
+    width:800px;
+    height:62px;
+    margin:3% auto 3% auto;
+    background-color: white;
+    li{
+      float:left;
+      display:inline-block;
+      color:#4A4A4A;
+      padding-top:21px;
+      width:12%;
+      h2{
+        display:block;
+        line-height: 23px;
+        padding-left: 10%;
+      }
+      h3{
+        font-size: 12px;
+        line-height: 25px;
+        display:block;
+        float:right;
+      }
+
+    }
+  }
+}
+
+//.ideal-weight{
+//    border-left:  5px solid $ideal-weight;
+//  }
+
+
+.footer{
+  height:90px;
+  background-color: $main-color;
+  text-align: center;
+  img{
+    filter:brightness(20%);
+    margin:0 auto;
+    height:55px;
+    width:55px;
+    margin-top: 18px;
+  }
+}
